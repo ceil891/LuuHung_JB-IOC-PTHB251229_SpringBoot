@@ -1,7 +1,5 @@
 package SS3.com.example.coursemanagement.model;
 
-import org.springframework.http.ResponseEntity;
-
 import java.time.LocalDateTime;
 
 public class ApiResponse<T> {
@@ -27,9 +25,6 @@ public class ApiResponse<T> {
 
     public static <T> ApiResponse<T> error(String message) {
         return new ApiResponse<>(false, message, null);
-    }
-
-    public static <T> ResponseEntity<T> builder() {
     }
 
     public boolean isSuccess() { return success; }
